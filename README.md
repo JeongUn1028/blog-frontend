@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+blog 의 frontend 의 frontend 사이드 의 구현
+ - 라우터를 이용해 경로를 설정했습니다.
+ - style 은 styled-components 를 이용하여 스타일링 했습니다.
+ - 리덕스를 이용하여 전역관리를 해주었고 immer 를 이용하여 불변성을 관리했습니다.
+ - 그리고 각 UI를 만들었습니다.
+ - snippet 을 이용하여 작업시간을 단축 하고자 했습니다.
+ - 재사용성이 높은 코드는 따로 분리해 각 폴더의 common 으로 분리했습니다.
+ - 비동기 관리 를 위해 redux-saga 를 이용했습니다.
+  폴더의 분리는 components, containers, lib, modules, pages 로 구분했습니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 회원가입/로그인 기능을 구현했습니다.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ LoginPage - 로그인
+ RegisterPage - 회원가입
+ WritePage - 글쓰기
+ PostPage - 포스트읽기
+ PostListPage - 포스트 목록 입니다.
+ 
+ 
+2. 글쓰기 기능을 Quill WYSIWYG 에디터를 이용해 구현했습니다.
+  Editor UI 를 먼저 구현하고 하단 UI를 구현 했으며 리덕스로 글쓰기에 관한 상태를 관리했습니다.
+  
+3. 블로그 포스트의 목록을 보여주는 기능과 포스트를 읽는 기능을 구현했습니다.
+   읽기, 목록 보기 기능을 각 UI를 먼저 구현하고 API를 연동하는 방향으로 구현했습니다.
+   
+4. 포스트를 수정하거나 삭제 할 수 있는 기능을 구현했습니다.
+  포스트 수정 기능을 구현하고 삭제 기능을 구현했습니다. react-helmet-async 를 이용해 meta 태그를 설정했습니다.
